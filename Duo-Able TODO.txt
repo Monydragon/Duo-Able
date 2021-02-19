@@ -1,0 +1,24 @@
+Script out the following systems.
+
+Trigger System (To Trigger another object with a switch or button)
+
+Timer System to do a countdown to end the level when complete.
+
+Score System to keep track of score
+
+scripting a move puzzle to move a block so that we can move a block onto a tile and that tile to trigger a call to activate.
+
+add messaging system.
+
+add pickup script for jewels collection.
+
+improve 2 player input to force 2 players on start and game play.
+
+optional (add camera distance based on players locations)
+optional (add generated objects to scene rather than static objects so like a object spawner)
+
+Other Tasks To get done.
+Character Sprite Rigging and Animation for character hub exported sprites.
+Finding more tiles/tilesets to create the levels with.
+Finding more interactable objects.
+
