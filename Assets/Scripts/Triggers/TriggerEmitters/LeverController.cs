@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using InControl;
-public class LeverController : MonoBehaviour
+public class LeverController : TriggerTransmitter
 {
     public Animator anim;
-    public bool enabled;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,9 +30,15 @@ public class LeverController : MonoBehaviour
             Player player = collision.GetComponent<Player>();
             if (player.Device.Action1.WasPressed)
             {
-                enabled = !enabled;
-                anim.SetBool("isEnabled", enabled);
+                Debug.Log("Triggering button");
+                Trigger();
             }
         }
+    }
+
+    public override void Trigger()
+    {
+        base.Trigger();
+        anim.SetBool("isEnabled", Triggered);
     }
 }
