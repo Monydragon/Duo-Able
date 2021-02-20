@@ -43,7 +43,7 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 11
+  serializedVersion: 12
   m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_LightingSettings: {fileID: 1094221742}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -118,6 +118,8 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
@@ -168,6 +170,7 @@ TilemapRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -435,25 +438,51 @@ Tilemap:
   m_TileMatrixArray:
   - m_RefCount: 0
     m_Data:
-      e00: NaN
-      e01: -9.7994734e-29
-      e02: -0.000000022577836
-      e03: NaN
-      e10: NaN
+      e00: 2.5244127e-29
+      e01: 0.00017944956
+      e02: 1.5968973e+29
+      e03: -0.0000000017358035
+      e10: 6.4e-43
       e11: 4.5904e-41
-      e12: 7.72e-43
-      e13: NaN
-      e20: -1.3090627e+19
-      e21: -3.056952e-30
-      e22: 0
-      e23: 0
-      e30: 3.28e-43
-      e31: 4.5904e-41
-      e32: 0
-      e33: 1
+      e12: 6.42e-43
+      e13: 6.39e-43
+      e20: 6e-45
+      e21: -5.034817e+19
+      e22: -5.034412e+19
+      e23: -5.034412e+19
+      e30: 0
+      e31: 2.02e-43
+      e32: 2.02e-43
+      e33: 2.02e-43
   m_TileColorArray:
   - m_RefCount: 0
-    m_Data: {r: 2.8352643e+10, g: 2.8352643e+10, b: 2.8352643e+10, a: 2.8352643e+10}
+    m_Data: {r: 0, g: 0, b: 0, a: 0}
+  - m_RefCount: 0
+    m_Data: {r: 1.5968973e+29, g: 1.5968973e+29, b: 1.5968973e+29, a: 1.5968973e+29}
+  - m_RefCount: 0
+    m_Data: {r: 1.5968973e+29, g: 1.5968973e+29, b: 1.5968973e+29, a: 1.5968973e+29}
+  - m_RefCount: 0
+    m_Data: {r: 1.5968973e+29, g: 1.5968973e+29, b: 1.5968973e+29, a: 1.5968973e+29}
+  - m_RefCount: 0
+    m_Data: {r: 1.5968973e+29, g: 1.5968973e+29, b: 1.5968973e+29, a: 1.5968973e+29}
+  - m_RefCount: 0
+    m_Data: {r: 1.5968973e+29, g: 1.5968973e+29, b: 1.5968973e+29, a: 1.5968973e+29}
+  - m_RefCount: 0
+    m_Data: {r: 1.5968973e+29, g: 1.5968973e+29, b: 1.5968973e+29, a: 1.5968973e+29}
+  - m_RefCount: 0
+    m_Data: {r: 1.5968973e+29, g: 1.5968973e+29, b: 1.5968973e+29, a: 1.5968973e+29}
+  - m_RefCount: 0
+    m_Data: {r: 1.5968973e+29, g: 1.5968973e+29, b: 1.5968973e+29, a: 1.5968973e+29}
+  - m_RefCount: 0
+    m_Data: {r: 1.5968973e+29, g: 1.5968973e+29, b: 1.5968973e+29, a: 1.5968973e+29}
+  - m_RefCount: 0
+    m_Data: {r: 1.5968973e+29, g: 1.5968973e+29, b: 1.5968973e+29, a: 1.5968973e+29}
+  - m_RefCount: 0
+    m_Data: {r: 1.5968973e+29, g: 1.5968973e+29, b: 1.5968973e+29, a: 1.5968973e+29}
+  - m_RefCount: 0
+    m_Data: {r: 1.5968973e+29, g: 1.5968973e+29, b: 1.5968973e+29, a: 1.5968973e+29}
+  - m_RefCount: 0
+    m_Data: {r: 1.5968973e+29, g: 1.5968973e+29, b: 1.5968973e+29, a: 1.5968973e+29}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -609,6 +638,7 @@ TilemapRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -924,30 +954,30 @@ Tilemap:
   m_TileMatrixArray:
   - m_RefCount: 0
     m_Data:
-      e00: NaN
-      e01: -9.7994734e-29
-      e02: -0.000000022577836
-      e03: NaN
-      e10: NaN
+      e00: 2.5244127e-29
+      e01: 0.00017944956
+      e02: 1.5854035e+29
+      e03: -8.6052454e-10
+      e10: 6.4e-43
       e11: 4.5904e-41
-      e12: 7.72e-43
-      e13: NaN
-      e20: -1.3090627e+19
-      e21: -3.056952e-30
-      e22: 0
-      e23: 0
-      e30: 3.28e-43
-      e31: 4.5904e-41
-      e32: 0
-      e33: 1
+      e12: 6.42e-43
+      e13: 6.39e-43
+      e20: 6e-45
+      e21: -5.034817e+19
+      e22: -5.034412e+19
+      e23: -5.034412e+19
+      e30: 0
+      e31: 2.02e-43
+      e32: 2.02e-43
+      e33: 2.02e-43
   m_TileColorArray:
   - m_RefCount: 0
-    m_Data: {r: 1.05785065e+11, g: 1.05785065e+11, b: 1.05785065e+11, a: 1.05785065e+11}
+    m_Data: {r: 1.5854035e+29, g: 1.5854035e+29, b: 1.5854035e+29, a: 1.5854035e+29}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -7, y: -1, z: 0}
-  m_Size: {x: 11, y: 19, z: 1}
+  m_Origin: {x: -7, y: -2, z: 0}
+  m_Size: {x: 11, y: 20, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -1031,6 +1061,67 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!850595691 &1094221742
+LightingSettings:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Settings.lighting
+  serializedVersion: 3
+  m_GIWorkflowMode: 1
+  m_EnableBakedLightmaps: 0
+  m_EnableRealtimeLightmaps: 0
+  m_RealtimeEnvironmentLighting: 1
+  m_BounceScale: 1
+  m_AlbedoBoost: 1
+  m_IndirectOutputScale: 1
+  m_UsingShadowmask: 1
+  m_BakeBackend: 0
+  m_LightmapMaxSize: 1024
+  m_BakeResolution: 40
+  m_Padding: 2
+  m_TextureCompression: 1
+  m_AO: 0
+  m_AOMaxDistance: 1
+  m_CompAOExponent: 1
+  m_CompAOExponentDirect: 0
+  m_ExtractAO: 0
+  m_MixedBakeMode: 2
+  m_LightmapsBakeMode: 1
+  m_FilterMode: 1
+  m_LightmapParameters: {fileID: 15204, guid: 0000000000000000f000000000000000, type: 0}
+  m_ExportTrainingData: 0
+  m_TrainingDataDestination: TrainingData
+  m_RealtimeResolution: 2
+  m_ForceWhiteAlbedo: 0
+  m_ForceUpdates: 0
+  m_FinalGather: 0
+  m_FinalGatherRayCount: 256
+  m_FinalGatherFiltering: 1
+  m_PVRCulling: 1
+  m_PVRSampling: 1
+  m_PVRDirectSampleCount: 32
+  m_PVRSampleCount: 500
+  m_PVREnvironmentSampleCount: 500
+  m_PVREnvironmentReferencePointCount: 2048
+  m_LightProbeSampleCountMultiplier: 4
+  m_PVRBounces: 2
+  m_PVRMinBounces: 2
+  m_PVREnvironmentMIS: 0
+  m_PVRFilteringMode: 2
+  m_PVRDenoiserTypeDirect: 0
+  m_PVRDenoiserTypeIndirect: 0
+  m_PVRDenoiserTypeAO: 0
+  m_PVRFilterTypeDirect: 0
+  m_PVRFilterTypeIndirect: 0
+  m_PVRFilterTypeAO: 0
+  m_PVRFilteringGaussRadiusDirect: 1
+  m_PVRFilteringGaussRadiusIndirect: 5
+  m_PVRFilteringGaussRadiusAO: 2
+  m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+  m_PVRFilteringAtrousPositionSigmaIndirect: 2
+  m_PVRFilteringAtrousPositionSigmaAO: 1
 --- !u!1 &1096368047
 GameObject:
   m_ObjectHideFlags: 0
@@ -1184,6 +1275,7 @@ TilemapRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1341,6 +1433,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
