@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class SettingsContext : AppContext
 {
+    private const string SETTINGS_UI_PREFAB = "";
+    private AppManager _appManager;
+    private UIWidget _settingsWidget;
+
+    public SettingsContext(AppManager appManager)
+    {
+        _appManager = appManager;
+    }
+
     public override void Transition(ContextState state, AppContext context = null, Dictionary<string, object> options = null)
     {
         // Non-transition guard
@@ -19,20 +28,19 @@ public class SettingsContext : AppContext
                 context.Transition(ContextState.Background);
             }
 
-            // TODO: Spawn UI for settings screen
-
+            _settingsWidget = _appManager.UIManager.AddUIToLayer(SETTINGS_UI_PREFAB, UILayer.UI);
         }
         else if(ContextState == ContextState.Active && state == ContextState.Background)
         {
-            // TODO: Set UI for settings screen to inactive
+            _settingsWidget.GameObject.SetActive(false);
         }
         else if(ContextState == ContextState.Background && state == ContextState.Active)
         {
-            // TODO: Set UI for settings screen to active
+            _settingsWidget.GameObject.SetActive(true);
         }
         else if(state == ContextState.Inactive)
         {
-            // TODO: Remove UI
+            _appManager.UIManager.RemoveWidgetById(_settingsWidget.UID);
         }
 
         ContextState = state;

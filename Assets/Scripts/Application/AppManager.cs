@@ -52,12 +52,15 @@ public class AppManager : MonoBehaviour
                 return;
             }
 
-            //TODO: Replace once we have a context
-            //if (message.NavigateToContext == )
-            //{
-
-            //}
-            //else
+            if (message.NavigateToContext == typeof(LevelContext))
+            {
+                ContextManager.PushContext(new LevelContext(this), message.Options);
+            }
+            else if(message.NavigateToContext == typeof(SettingsContext))
+            {
+                ContextManager.PushContext(new SettingsContext(this), message.Options);
+            }
+            else
             {
                 Debug.LogWarningFormat("Unsupported Context Type attempted to be pushed: {0}", message.NavigateToContext.ToString());
             }

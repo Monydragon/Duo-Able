@@ -1,9 +1,16 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 public class LevelContext : AppContext
 {
+    private const string GAME_UI_PREFAB = "UI_GameScreen";
+    private UIWidget _gameScreen;
+    private AppManager _appManager;
+
+    public LevelContext(AppManager appManager)
+    {
+        _appManager = appManager;
+    }
+
     public override void Transition(ContextState state, AppContext context = null, Dictionary<string, object> options = null)
     {
         // Non-transition guard
@@ -19,20 +26,20 @@ public class LevelContext : AppContext
                 context.Transition(ContextState.Background);
             }
 
-            // TODO: Spawn UI for Level screen
-
+            _gameScreen = _appManager.UIManager.AddUIToLayer(GAME_UI_PREFAB, UILayer.UI);
         }
         else if (ContextState == ContextState.Active && state == ContextState.Background)
         {
-            // TODO: Set UI for Level screen to inactive
+            _gameScreen.GameObject.SetActive(false);
+
         }
         else if (ContextState == ContextState.Background && state == ContextState.Active)
         {
-            // TODO: Set UI for Level screen to active
+            _gameScreen.GameObject.SetActive(true);
         }
         else if (state == ContextState.Inactive)
         {
-            // TODO: Remove UI
+            _appManager.UIManager.RemoveWidgetById(_gameScreen.UID);
         }
 
         ContextState = state;

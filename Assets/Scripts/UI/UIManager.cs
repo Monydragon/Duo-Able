@@ -118,7 +118,7 @@ public class UIManager
         _widgetMap.Remove(widget.UID);
     }
     
-    private void RemoveWidgetById(string widgetUID)
+    public void RemoveWidgetById(string widgetUID)
     {
         if(_widgetMap.ContainsKey(widgetUID))
         {
