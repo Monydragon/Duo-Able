@@ -12,13 +12,13 @@ public class UIGameScreen : MonoBehaviour
 
     private void Start()
     {
-        MessageManager.RegisterForChannel(MessageChannels.UI, InternalMessageHandler);
+        MessageManager.RegisterForChannel(MessageChannels.Scoring, InternalMessageHandler);
         UpdateScoreUI();
     }
 
     private void OnDestroy()
     {
-        MessageManager.UnregisterForChannel(MessageChannels.UI, InternalMessageHandler);    
+        MessageManager.UnregisterForChannel(MessageChannels.Scoring, InternalMessageHandler);    
     }
 
     private void InternalMessageHandler(IMessageEnvelope envelope)
