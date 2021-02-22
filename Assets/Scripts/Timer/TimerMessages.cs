@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TimerMessages : MonoBehaviour
+public class TimerMessages
 {
     public struct ModifyTimeMessage
     {

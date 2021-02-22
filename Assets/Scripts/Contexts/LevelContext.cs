@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class LevelContext : AppContext
 {
@@ -25,6 +26,17 @@ public class LevelContext : AppContext
             {
                 context.Transition(ContextState.Background);
             }
+
+            string levelName = "SampleScene";
+            if (options != null)
+            {
+                if (options.ContainsKey("LevelName"))
+                {
+                    levelName = (string)options["LevelName"];
+                }
+            }
+
+            SceneManager.LoadScene(levelName);
 
             _gameScreen = _appManager.UIManager.AddUIToLayer(GAME_UI_PREFAB, UILayer.UI);
         }
