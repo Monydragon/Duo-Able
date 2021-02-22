@@ -922,31 +922,31 @@ TextureImporter:
     second: dungeon tileset calciumtrice_305
   - first:
       213: 2423504690107883930
-    second: dungeon tileset calciumtrice_306
+    second: dungeon tileset calciumtrice_Crate1
   - first:
       213: -1936494945611159196
-    second: dungeon tileset calciumtrice_307
+    second: dungeon tileset calciumtrice_Crate
   - first:
       213: 4075247133898260382
-    second: dungeon tileset calciumtrice_308
+    second: dungeon tileset calciumtrice_Chest1
   - first:
       213: 3958279951801268558
-    second: dungeon tileset calciumtrice_309
+    second: dungeon tileset calciumtrice_Chest2
   - first:
       213: -8904390058468152341
-    second: dungeon tileset calciumtrice_310
+    second: dungeon tileset calciumtrice_Barrel1
   - first:
       213: -3536885031351413206
-    second: dungeon tileset calciumtrice_311
+    second: dungeon tileset calciumtrice_Barrel2
   - first:
       213: -5836023360488537534
-    second: dungeon tileset calciumtrice_312
+    second: dungeon tileset calciumtrice_Sack1
   - first:
       213: 980100413263325057
-    second: dungeon tileset calciumtrice_313
+    second: dungeon tileset calciumtrice_Sack2
   - first:
       213: -7830562010345027193
-    second: dungeon tileset calciumtrice_314
+    second: dungeon tileset calciumtrice_Sack3
   - first:
       213: 6492717374308946669
     second: dungeon tileset calciumtrice_315
@@ -1665,7 +1665,7 @@ TextureImporter:
       213: -2453074690765006929
     second: dungeon tileset calciumtrice_553
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -1685,6 +1685,7 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -1716,9 +1717,13 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -8198,7 +8203,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dungeon tileset calciumtrice_306
+      name: dungeon tileset calciumtrice_Crate1
       rect:
         serializedVersion: 2
         x: 0
@@ -8219,7 +8224,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dungeon tileset calciumtrice_307
+      name: dungeon tileset calciumtrice_Crate
       rect:
         serializedVersion: 2
         x: 16
@@ -8240,7 +8245,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dungeon tileset calciumtrice_308
+      name: dungeon tileset calciumtrice_Chest1
       rect:
         serializedVersion: 2
         x: 32
@@ -8261,7 +8266,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dungeon tileset calciumtrice_309
+      name: dungeon tileset calciumtrice_Chest2
       rect:
         serializedVersion: 2
         x: 48
@@ -8282,7 +8287,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dungeon tileset calciumtrice_310
+      name: dungeon tileset calciumtrice_Barrel1
       rect:
         serializedVersion: 2
         x: 64
@@ -8303,7 +8308,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dungeon tileset calciumtrice_311
+      name: dungeon tileset calciumtrice_Barrel2
       rect:
         serializedVersion: 2
         x: 80
@@ -8324,7 +8329,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dungeon tileset calciumtrice_312
+      name: dungeon tileset calciumtrice_Sack1
       rect:
         serializedVersion: 2
         x: 96
@@ -8345,7 +8350,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dungeon tileset calciumtrice_313
+      name: dungeon tileset calciumtrice_Sack2
       rect:
         serializedVersion: 2
         x: 112
@@ -8366,7 +8371,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dungeon tileset calciumtrice_314
+      name: dungeon tileset calciumtrice_Sack3
       rect:
         serializedVersion: 2
         x: 128

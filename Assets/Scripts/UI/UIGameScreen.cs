@@ -8,17 +8,23 @@ using static MessagingSystem.MessageSystem;
 public class UIGameScreen : MonoBehaviour
 {
     [SerializeField] private Text _scoreText;
+    [SerializeField] private Text _timerText;
+    [SerializeField] private bool timerIsRunning = false;
+    [SerializeField] private float timeRemaining = 120;
     private float _score;
+    private float _timeDisplay;
 
     private void Start()
     {
         MessageManager.RegisterForChannel(MessageChannels.Scoring, InternalMessageHandler);
+        MessageManager.RegisterForChannel(MessageChannels.Timer, InternalMessageHandler);
         UpdateScoreUI();
     }
 
     private void OnDestroy()
     {
         MessageManager.UnregisterForChannel(MessageChannels.Scoring, InternalMessageHandler);    
+        MessageManager.UnregisterForChannel(MessageChannels.Timer, InternalMessageHandler);    
     }
 
     private void InternalMessageHandler(IMessageEnvelope envelope)
@@ -38,6 +44,42 @@ public class UIGameScreen : MonoBehaviour
         else if(type.Equals(typeof(ScoringMessages.ResetScoreMessage)))
         {
             ResetScore();
+        }
+        else if (type.Equals(typeof(TimerMessages.ModifyTimeMessage)))
+        {
+            TimerMessages.ModifyTimeMessage message = envelope.Message<TimerMessages.ModifyTimeMessage>();
+            timeRemaining += message.Modifier;
+        }
+        else if (type.Equals(typeof(TimerMessages.SetTimeMessage)))
+        {
+            TimerMessages.SetTimeMessage message = envelope.Message<TimerMessages.SetTimeMessage>();
+            timeRemaining = message.Time;
+        }
+        else if (type.Equals(typeof(TimerMessages.StopTimeMessage)))
+        {
+            timerIsRunning = false;
+        }
+        else if (type.Equals(typeof(TimerMessages.StartTimeMessage)))
+        {
+            timerIsRunning = true;
+        }
+    }
+
+    private void Update()
+    {
+        if (timerIsRunning)
+        {
+            if(timeRemaining > 0)
+            {
+                timeRemaining -= Time.deltaTime;
+                DisplayTime(timeRemaining);
+            }
+            else
+            {
+                Debug.Log("Time Has Expired");
+                timeRemaining = 0;
+                timerIsRunning = false;
+            }
         }
     }
 
@@ -65,5 +107,15 @@ public class UIGameScreen : MonoBehaviour
         {
             _scoreText.text = string.Format("Score: {0}", _score);
         }
+    }
+
+   private void DisplayTime(float timeToDisplay)
+    {
+        timeToDisplay += 1;
+
+        float minutes = Mathf.FloorToInt(timeToDisplay / 60);
+        float seconds = Mathf.FloorToInt(timeToDisplay % 60);
+
+        _timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 }

@@ -4,4 +4,5 @@
     public const string Scoring = "Scoring";
     public const string Triggers = "Triggers";
     public const string UI = "UI";
+    public const string Timer = "Timer";
 }
