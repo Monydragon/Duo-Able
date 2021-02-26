@@ -27,6 +27,9 @@ public class AppManager : MonoBehaviour
         // Create UI Root
         GameObject go = Instantiate(_uiRoot);
         UIManager = new UIManager(go.transform);
+        DontDestroyOnLoad(go);
+
+        MessageManager.Send(MessageChannels.Navigation, new NavigationMessage(typeof(LevelContext), false));
     }
 
     private void OnDestroy()

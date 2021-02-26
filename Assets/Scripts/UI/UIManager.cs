@@ -103,7 +103,13 @@ public class UIManager
     {
         string uid = string.Format("{0}_{1}", layer, uiName);
 
-        GameObject go = Resources.Load<GameObject>(uiName);
+        GameObject loaded = Resources.Load<GameObject>(uiName);
+        if(loaded == null)
+        {
+            Debug.LogErrorFormat("Resource not found in Resources folder: {0}", uiName);
+            return new UIWidget();
+        }
+        GameObject go = GameObject.Instantiate(loaded, _layerMap[layer.ToString()]);
         go.name = uid;
 
         UIWidget widget = new UIWidget(uid, uiName, go);
